@@ -11,6 +11,6 @@
     "main": "server.js",
     "scripts": {
         "dev": "nodemon",
-        "start": "node server.js"
+        "start": "npm i && node server.js"
     }
 }
