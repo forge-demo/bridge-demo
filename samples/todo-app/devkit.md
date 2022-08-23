@@ -2,7 +2,7 @@
 
 ## Setup Steps
 
-1. Install devkit
+### 1. Install devkit
 
 ```
 $ git clone https://github.com/Azure/forge.git
@@ -12,7 +12,7 @@ $ make build
 
 This step will clone and build the devkit client binary in `<path-to-repo>/forge/devkit/bin/devkit`.
 
-2. Export devkit cli path
+### 2. Export devkit cli path
 
 ```
 $ export PATH=$PATH:<path-to-repo>/forge/devkit/bin
@@ -38,21 +38,21 @@ Flags:
 Use "devkit [command] --help" for more information about a command.
 ```
 
-3. Clone this repo
+### 3. Clone this repo
 
 ```
 $ git clone https://github.com/forge-demo/bridge-demo.git
 $ cd bridge-demo/samples/todo-app
 ```
 
-4. Connect to a Kubernetes cluster and create a namespace
+### 4. Connect to a Kubernetes cluster and create a namespace
 
 ```
 $ kubectl create ns devkit-bridge-demo
 namespace/devkit-bridge-demo created
 ```
 
-5. Deploy this todo-app demo
+### 5. Deploy this todo-app demo
 
 ```
 $ kubectl -n devkit-bridge-demo apply -f deployment.yaml
@@ -86,14 +86,14 @@ If you can see a todo app in the browser, this means the demo is working.
 
 ## Devkit Usage Steps
 
-0. Setup devkit
+### 0. Setup devkit
 
 This demo has been setup with the devkit settings in below:
 
 - `.devkit/` directory: store the devkit configs
 - `.devkit-root`: specifies the root of the project (we only want to sync this demo folder for now)
 
-1. Spawn devkit environment
+### 1. Spawn devkit environment
 
 ```
 # NOTE: this command might take a while for initial run as we need to sync the whole folder to remote...
@@ -115,7 +115,7 @@ This environment runs in the remote cluster as a pod, providing:
 - shell access, where we can run commands as in local
 - automatically code sync from local to remote: we will edit the code from local then run in remote
 
-2. Start `stats-api`
+### 2. Start `stats-api`
 
 ```
 devkit ➜ /workspace $ cd stats-api
@@ -130,7 +130,7 @@ Listening on port 3001
 
 Now the process is up and listening on port 3000.
 
-3. "Bridging" `stats-api` service
+### 3. "Bridging" `stats-api` service
 
 Now open another terminal and run the following command:
 
@@ -174,7 +174,7 @@ request for stats received with kubernetes-route-as header: undefined
 sending back response: {"todosCreated":"2","todosCompleted":0,"todosDeleted":0}
 ```
 
-4. Making code change
+### 4. Making code change
 
 Now everything is ready and we can make some code change. For example, we can edit the `server.js` in local:
 
