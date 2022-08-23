@@ -33,11 +33,15 @@ app.get('/stats', async function (req, res) {
     } catch (err) {
         console.log(err);
     }
-    res.send({
+
+    var resp = {
         todosCreated: created || 0,
         todosCompleted: completed || 0,
         todosDeleted: deleted || 0,
-    });
+    };
+    console.log('sending back response: %s', JSON.stringify(resp));
+
+    res.send(resp);
 });
 
 var port = process.env.PORT || 3001;
