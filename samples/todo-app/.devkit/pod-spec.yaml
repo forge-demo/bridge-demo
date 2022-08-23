@@ -9,7 +9,7 @@ spec:
         - "12"
       command:
         - devkit-server
-      image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022082302
+      image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022060301
       imagePullPolicy: IfNotPresent
       name: devkit-main
       resources:
