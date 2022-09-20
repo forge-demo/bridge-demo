@@ -9,13 +9,12 @@ spec:
         - "12"
       command:
         - devkit-server
-      image: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022082303
       imagePullPolicy: IfNotPresent
-      name: devkit-main
+      name: stats-api
       resources:
         limits:
           cpu: "2"
-          memory: 2Gi
+          memory: 3Gi
         requests:
           cpu: "1"
           memory: 1Gi

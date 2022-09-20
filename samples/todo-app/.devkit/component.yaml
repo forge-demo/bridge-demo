@@ -8,7 +8,8 @@ profiles:
     kubernetes:
       pod:
         name: stats-api
-        mainEntryContainerImage: ghcr.io/b4fun/forge/devkit/workspace-node-17-bullseye:v2022082303
+        mainEntryContainerImage: forgedev.azurecr.io/devkit-containers/node:v2022092002
+        mainEntryContainer: stats-api
       patches:
         - clonePod:
             selector:
