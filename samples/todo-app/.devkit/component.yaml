@@ -17,3 +17,10 @@ profiles:
                 name: stats-api
         - # below is a sample pod spec for current project, please edit based on the project settings
           podSpec: pod-spec.yaml
+    serviceMeshes:
+      - inCluster:
+          service: stats-api
+      - toLocal:
+          targetService: stats-api
+          ports:
+            - port: 3001
